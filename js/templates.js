@@ -112,7 +112,6 @@ var guest_info_data = {
 
 var registry_data = { registry: [
   {img: "images/registry/bed_bath_and_beyond.png", alt: "Bed Bath & Beyond", width: "200", height: "200", link: "http://goo.gl/pKAzQu"},
-  {img: "images/registry/honeyfund.jpg", alt: "Honeyfund", width: "200", height: "200", link: "http://www.honeyfund.com/wedding/pezwedding"},
   {img: "images/registry/amazon.png", alt: "Amazon", width: "200", height: "200", link: "http://www.amazon.com/registry/wedding/3K284SFHQ2STZ"},
 ]};
 
