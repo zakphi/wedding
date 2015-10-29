@@ -19,13 +19,21 @@ $(function(){
   $('a[href*=#]').click(function() {
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
       var $target = $(this.hash);
-      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+      $target = $target.length && $target || $('[name="' + this.hash.slice(1) +'"]');
       if ($target.length) {
-        var targetOffset = $target.offset().top - $("nav").outerHeight(true);
-        // var targetOffset = $target.offset().top;
+        var targetOffset = $target.offset().top - $("#menu-mobile").outerHeight(true);
         $('html,body').animate({scrollTop: targetOffset}, 1000);
         return false;
       }
     }
   });
+});
+
+jQuery('#menu-mobile').click(function() {
+  jQuery('#main-nav').toggleClass("open");
+});
+
+jQuery('#main-nav a').click(function() {
+  console.log("doody");
+  jQuery('#main-nav').removeClass("open");
 });

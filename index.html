@@ -17,7 +17,7 @@
   <body>
 
   <div id="intro"></div>
-  <nav id="nav"></nav>
+  <nav id="site-nav"><div id="menu-mobile"><a href="#">Menu</a></div></nav>
   <div id="wrapper">
     <div id="wedding-site">
       <div id="the-wedding"></div>
@@ -51,9 +51,11 @@
   </script>
 
   <script id="nav-template" type="text/x-handlebars">
-    {{#nav}}
-      <a href="#{{name}}">{{title}}</a>
-    {{/nav}}
+    <div id="main-nav">
+      {{#nav}}
+        <a href="#{{name}}">{{title}}</a>
+      {{/nav}}
+    </div>
   </script>
 
   <script id="the-wedding-template" type="text/x-handlebars">

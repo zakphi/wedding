@@ -33,8 +33,6 @@ h2
   fontsize(3.5)
 p
   secondary-font()
-nav
-  background-color dark-grey
 
 #wrapper
   width 90%
@@ -46,21 +44,43 @@ nav
       h1
         padding-bottom .25em
 
-nav
-  display table
-  width 100%
-  primary-font()
-  fontsize(2)
-  position fixed
-  top 0
-  z-index 9999
-  height 5%
-  a
-    display table-cell
-    vertical-align middle
-    color navy
-  a:link
-    text-decoration none
+#site-nav
+  #main-nav
+    display none
+    &.open
+      position absolute
+      z-index 999999
+      display block
+      right 0
+      left 0
+      top 4%
+      background-color dark-grey
+      primary-font()
+    a
+      display block
+      fontsize(3)
+      color navy
+      padding-bottom .5em
+    a:first-child
+      padding-top .5em
+    a:link
+      text-decoration none
+  #menu-mobile
+    display table
+    width 100%
+    primary-font()
+    fontsize(4)
+    position fixed
+    top 0
+    z-index 9999
+    height 5%
+    background-color dark-grey
+    a
+      display table-cell
+      vertical-align middle
+      color navy
+    a:link
+      text-decoration none
 
 #intro
   width 100%
@@ -219,8 +239,9 @@ nav
 
 // tablet
 @media screen and (min-device-width: 768px)
-  nav
-    height 10%
+  #site-nav
+    #main-nav
+      height 10%
   #intro
     .intro-text
       h1:first-child
@@ -232,6 +253,25 @@ nav
 
 // laptop
 @media screen and (min-width: 1200px)
+  #site-nav
+    #main-nav
+      display table
+      width 100%
+      primary-font()
+      fontsize(2)
+      position fixed
+      top 0
+      z-index 9999
+      height 10%
+      background-color dark-grey
+      a
+        display table-cell
+        vertical-align middle
+        color navy
+      a:link
+        text-decoration none
+    #menu-mobile
+      display none
   #intro
     .intro-text
       h1:first-child

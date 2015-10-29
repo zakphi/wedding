@@ -126,7 +126,7 @@ var registry = registry_template(registry_data);
 
 // render
 $('#intro').append(intro);
-$('#nav').append(nav);
+$('#site-nav').append(nav);
 $('#the-wedding').append(the_wedding);
 $('#wedding-party').append(wedding_party);
 $('#gallery').append(gallery);
