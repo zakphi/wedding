@@ -52,7 +52,7 @@ var the_wedding_data = {
     "city": "Chappaqua, NY",
     "zip": "10514",
     "directions": "https://goo.gl/cnZzQ3",
-    "hashtag": "pezwedding16"
+    "hashtag": "pezwedding"
   },
   "date":
   {

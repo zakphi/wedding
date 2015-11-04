@@ -126,11 +126,11 @@
 
   <script id="registry-template" type="text/x-handlebars">
     <h1>registry</h1>
-      {{#registry}}
-        <div class="registry-images">
-          <a href="{{link}}" target="_blank"><img src="{{img}}" alt="{{alt}}" width="{{width}}" height="{{height}}" /></a>
-        </div>
-      {{/registry}}
+      <div class="registry-images">
+        {{#registry}}
+            <a href="{{link}}" target="_blank"><img src="{{img}}" alt="{{alt}}" width="{{width}}" height="{{height}}" /></a>
+        {{/registry}}
+      </div>
   </script>
 
   <script src="js/handlebars.js"></script>
