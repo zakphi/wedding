@@ -33,7 +33,6 @@
   <div id="wrapper">
     <div id="wedding-site">
       <div id="the-wedding"></div>
-      <div id="wedding-party"></div>
       <div id="gallery"></div>
       <div id="guest-info"></div>
       <div id="registry"></div>
@@ -93,17 +92,6 @@
         </tr>
       </tbody>
     </table>
-  </script>
-
-  <script id="wedding-party-template" type="text/x-handlebars">
-    <h1>wedding party</h1>
-      {{#members}}
-        <div class="members">
-          <img src="{{img}}" alt="{{alt}}" width="{{width}}" height="{{height}}" />
-          <h2>{{name}}</h2>
-          <h3>{{role}}</h3>
-        </div>
-      {{/members}}
   </script>
 
   <script id="gallery-template" type="text/x-handlebars">

@@ -2,7 +2,6 @@
 var intro_source = $('#intro-template').html();
 var nav_source = $('#nav-template').html();
 var the_wedding_source = $('#the-wedding-template').html();
-var wedding_party_source = $('#wedding-party-template').html();
 var gallery_source = $('#gallery-template').html();
 var guest_info_source = $('#guest-info-template').html();
 var registry_source = $('#registry-template').html();
@@ -11,7 +10,6 @@ var registry_source = $('#registry-template').html();
 var intro_template = Handlebars.compile(intro_source);
 var nav_template = Handlebars.compile(nav_source);
 var the_wedding_template = Handlebars.compile(the_wedding_source);
-var wedding_party_template = Handlebars.compile(wedding_party_source);
 var gallery_template = Handlebars.compile(gallery_source);
 var guest_info_template = Handlebars.compile(guest_info_source);
 var registry_template = Handlebars.compile(registry_source);
@@ -35,7 +33,6 @@ var intro_data = {
 
 var nav_data = { nav: [
   {title: "the wedding", name: "the-wedding"},
-  {title: "wedding party", name: "wedding-party"},
   {title: "gallery", name: "gallery"},
   {title: "guest info", name: "guest-info"},
   {title: "registry", name: "registry"},
@@ -64,13 +61,6 @@ var the_wedding_data = {
     {name: "Party time", time: "7:00pm"},
   ],
 };
-
-var wedding_party_data = { members: [
-  {img: "images/wedding_party/stephen.jpg", alt: "Stephen, Best Man", name: "Stephen", role: "Best Man", width: "127", height: "200"},
-  {img: "images/wedding_party/ephraim.jpg", alt: "Ephraim, Groomsman", name: "Ephraim", role: "Groomsman", width: "127", height: "200"},
-  {img: "images/wedding_party/christina.jpg", alt: "Christina, Maid of Honor", name: "Christina", role: "Maid of Honor", width: "127", height: "200"},
-  {img: "images/wedding_party/eve.jpg", alt: "Eve, Bridesmaid", name: "Eve", role: "Bridesmaid", width: "127", height: "200"},
-]};
 
 var gallery_data = { gallery: [
   {img: "images/engagement_pictures/895C7630_first-min.jpg", width: "600", height: "400"},
@@ -119,7 +109,6 @@ var registry_data = { registry: [
 var intro = intro_template(intro_data);
 var nav = nav_template(nav_data);
 var the_wedding = the_wedding_template(the_wedding_data);
-var wedding_party = wedding_party_template(wedding_party_data);
 var gallery = gallery_template(gallery_data);
 var guest_info = guest_info_template(guest_info_data);
 var registry = registry_template(registry_data);
@@ -128,7 +117,6 @@ var registry = registry_template(registry_data);
 $('#intro').append(intro);
 $('#site-nav').append(nav);
 $('#the-wedding').append(the_wedding);
-$('#wedding-party').append(wedding_party);
 $('#gallery').append(gallery);
 $('#guest-info').append(guest_info);
 $('#registry').append(registry);
